@@ -1,11 +1,9 @@
-print("Nome: ")
-nome = gets.chomp()
 
-print("Sobrenome: ")
-sobrenome = gets.chomp
+require 'bigdecimal'
 
-print("Idade: ")
-idade = gets.chomp()
+line = gets.split(" ")
+a = line[0].to_i
+b = line[1].to_i
 
-
-print("#{nome} #{sobrenome} #{idade} anos")
+media = BigDecimal(a) / BigDecimal(b)
+print format('%.2f', media)
